@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>امیرحسین رحیمی | برنامه‌نویس پایتون</title>
+
+    <meta name="description"
+        content="رزومه و پورتفولیوی امیرحسین رحیمی، دانش‌آموز برق و توسعه‌دهنده Python">
+    <meta name="theme-color" content="#00d4ff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Background -->
+    <canvas id="canvas-bg"></canvas>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                &lt;Amirhossein /&gt;
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">درباره من</a></li>
+                <li><a href="#skills">مهارت‌ها</a></li>
+                <li><a href="#projects">پروژه‌ها</a></li>
+                <li><a href="#timeline">تحصیل</a></li>
+                <li><a href="#contact">تماس</a></li>
+            </ul>
+
+            <!-- Mobile hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="باز کردن منو">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </nav>
+
+        <!-- Mobile dropdown menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="#about">درباره من</a></li>
+                <li><a href="#skills">مهارت‌ها</a></li>
+                <li><a href="#projects">پروژه‌ها</a></li>
+                <li><a href="#timeline">تحصیل</a></li>
+                <li><a href="#contact">تماس</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ===================== Hero ===================== -->
+    <!-- CHANGED: two-column layout — image left, text right -->
+    <section id="hero">
+
+        <div class="hero-inner">
+
+            <!-- Profile image — MOVED from About section -->
+            <div class="hero-profile" data-aos="fade-right">
+                <img src="assets/my_background.png" alt="Amirhossein Rahimi" class="hero-avatar">
+            </div>
+
+            <!-- Hero text content -->
+            <div class="hero-content">
+
+                <!-- CHANGED: updated greeting text -->
+                <h1 data-aos="fade-up" data-aos-delay="100">
+                    سلام👋<br>منم <span>امیرحسین رحیمی</span>
+                </h1>
+
+                <!-- NEW: static sub-heading below h1 -->
+                <p class="hero-static-sub" data-aos="fade-up" data-aos-delay="150">
+                    ⚡ الکتروتکنیک . نرم‌افزار . هوش مصنوعی
+                </p>
+
+                <!-- Typewriter line -->
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    <span id="typing-text"></span>
+                    <span class="blink">|</span>
+                </p>
+
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#projects" class="btn btn-primary">مشاهده پروژه‌ها</a>
+                    <a href="https://github.com/AmirhosseinR9" target="_blank" class="btn btn-outline">GitHub</a>
+                </div>
+
+            </div><!-- /hero-content -->
+
+        </div><!-- /hero-inner -->
+
+        <!-- REMOVED: .stats / counter block -->
+
+    </section>
+
+    <!-- ===================== About ===================== -->
+    <!-- CHANGED: image removed, glassmorphism card added, text updated -->
+    <section id="about" class="section">
+
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>درباره من</h2>
+            </div>
+
+            <!-- NEW: glassmorphism card wrapping text content -->
+            <div class="about-glass-card" data-aos="fade-up" data-aos-delay="100">
+
+                <h3>سازنده فناوری — الکتروتکنیک، نرم‌افزار و هوش مصنوعی</h3>
+
+                <p>
+                    دانش‌آموز رشته الکتروتکنیک هستم با پس‌زمینه‌ای در توسعه نرم‌افزار
+                    و رویکرد مهندسی به حل مسئله. برای من هر ایده‌ای یک مسئله فنی است
+                    که باید به یک راه‌حل کاربردی تبدیل شود.
+                </p>
+
+                <p class="about-p2">
+                    از ابزارهای هوش مصنوعی به‌عنوان بخشی از جریان کاری توسعه استفاده می‌کنم —
+                    برای تحقیق سریع‌تر، پروتوتایپ‌سازی، اشکال‌زدایی و مستندسازی.
+                    این رویکرد سرعت اجرای پروژه را بالا می‌برد و کیفیت خروجی را بهتر می‌کند.
+                </p>
+
+                <div class="info-list">
+                    <div>📍 میناب، هرمزگان</div>
+                    <div>⚡ الکتروتکنیک — پایه یازدهم</div>
+                    <!-- CHANGED: "Software & Embedded Systems" → "Programmer" -->
+                    <div>🛠 Programmer</div>
+                    <div>🤖 AI-Assisted Development</div>
+                </div>
+
+            </div><!-- /about-glass-card -->
+
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>مهارت‌ها</h2>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                            <path d="M15.885 2.1c-7.1 0-6.651 3.07-6.651 3.07v3.19h6.752v.96H6.545S2 8.8 2 16.005s4.013 6.912 4.013 6.912h2.398v-3.32s-.13-4.013 3.95-4.013h6.807s3.819.061 3.819-3.69V5.842s.58-3.742-7.102-3.742zm-3.75 2.155a1.214 1.214 0 110 2.43 1.214 1.214 0 010-2.43z" fill="currentColor"/>
+                            <path d="M16.115 29.9c7.1 0 6.651-3.07 6.651-3.07v-3.19h-6.752v-.96h9.441S30 23.2 30 15.995s-4.013-6.912-4.013-6.912h-2.398v3.32s.13 4.013-3.95 4.013h-6.807s-3.819-.061-3.819 3.69v6.052S8.433 29.9 16.115 29.9zm3.75-2.155a1.214 1.214 0 110-2.43 1.214 1.214 0 010 2.43z" fill="currentColor" opacity=".7"/>
+                        </svg>
+                    </div>
+                    <h3>Python</h3>
+                    <p>توسعه نرم‌افزار، اتوماسیون و ساخت ابزارهای کاربردی</p>
+                </div>
+
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                            <path d="M16 2a14 14 0 100 28A14 14 0 0016 2zm6.8 8.6h-3.27c-.36-1.36-.87-2.67-1.52-3.87a11.28 11.28 0 014.79 3.87zM16 4.74c.9 1.27 1.6 2.7 2.07 4.22H13.93A13.08 13.08 0 0116 4.74zm-9.52 8.22A11.2 11.2 0 016.26 11h3.5a22.3 22.3 0 000 2.96H6.26zm.72 2h3.06c.16 1.04.4 2.04.72 3H8.15a11.3 11.3 0 01-2.95-3zm2.34-7.36H6.26A11.28 11.28 0 0111.05 6.87a15.47 15.47 0 00-1.51 3.87zm3.53-3.86a13.08 13.08 0 00-2.07 4.22h-3.07a11.26 11.26 0 015.14-4.22zm-5.14 12.22h3.07A13.08 13.08 0 0013.07 21 11.26 11.26 0 016.93 16.76zM16 27.26c-.9-1.27-1.6-2.7-2.07-4.22h4.14A13.08 13.08 0 0116 27.26zm2.53-.3a15.47 15.47 0 001.51-3.92h3.43a11.28 11.28 0 01-4.94 3.92zm2.04-5.96a22.3 22.3 0 000-3h3.26a11.2 11.2 0 010 3h-3.26zm-1.5-5H12.93a19.4 19.4 0 010-3.96h6.14a19.4 19.4 0 010 3.96zm1.5-5.96H13.43A11.3 11.3 0 0115.5 8.6h1a11.3 11.3 0 012.07 1.44zm1.49 9h3.06a11.3 11.3 0 01-2.95 3 15.47 15.47 0 00-.11-3z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Git & GitHub</h3>
+                    <p>کنترل نسخه، مدیریت پروژه و انتشار کد</p>
+                </div>
+
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                            <path d="M27 7H5a3 3 0 00-3 3v12a3 3 0 003 3h22a3 3 0 003-3V10a3 3 0 00-3-3zm-2 14H7a1 1 0 01-1-1V11a1 1 0 011-1h18a1 1 0 011 1v9a1 1 0 01-1 1zm-9-8h-4v2h4v2h-4a2 2 0 01-2-2v-2a2 2 0 012-2h4v2zm6 4h-2v-6h-2v-2h4v8zm-10 0H8v-8h4a2 2 0 012 2v2a2 2 0 01-2 2h-2v2H12z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>SQLite</h3>
+                    <p>طراحی پایگاه داده و مدیریت داده در پروژه‌های نرم‌افزاری</p>
+                </div>
+
+                <!-- REMOVED: C Language card -->
+
+                <!-- AI Workflow Integration skill card -->
+                <div class="skill-card skill-card--ai" data-aos="fade-up" data-aos-delay="240">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none">
+                            <circle cx="16" cy="6" r="3" fill="currentColor"/>
+                            <circle cx="5" cy="20" r="3" fill="currentColor"/>
+                            <circle cx="27" cy="20" r="3" fill="currentColor"/>
+                            <circle cx="11" cy="28" r="3" fill="currentColor"/>
+                            <circle cx="21" cy="28" r="3" fill="currentColor"/>
+                            <line x1="16" y1="9" x2="5" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+                            <line x1="16" y1="9" x2="27" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+                            <line x1="5" y1="23" x2="11" y2="25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+                            <line x1="27" y1="23" x2="21" y2="25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+                            <line x1="8" y1="20" x2="24" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+                            <line x1="13" y1="28" x2="19" y2="28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+                        </svg>
+                    </div>
+                    <h3>AI Workflow Integration</h3>
+                    <p>استفاده حرفه‌ای از هوش مصنوعی در تحقیق، طراحی، توسعه و مستندسازی پروژه‌ها</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>پروژه‌ها</h2>
+            </div>
+
+            <div class="projects-grid" id="projects-container">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="section">
+
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>مسیر تحصیلی</h2>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <h3>ورود به رشته برق</h3>
+                    <span>۱۴۰۴</span>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <h3>شروع یادگیری Python</h3>
+                    <span>۱۴۰۴</span>
+                </div>
+
+                <!-- REMOVED: شروع یادگیری C milestone -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>تماس با من</h2>
+                <p class="section-subtitle">برای همکاری، پروژه یا هر سوالی در دسترسم</p>
+            </div>
+
+            <div class="contact-cards" data-aos="fade-up" data-aos-delay="100">
+
+                <a href="https://github.com/AmirhosseinR9"
+                   target="_blank"
+                   rel="noopener"
+                   class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-label">GitHub</span>
+                        <span class="contact-card-handle">AmirhosseinR9</span>
+                    </div>
+                    <div class="contact-card-arrow">←</div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/amirhossein-rahimi9"
+                   target="_blank"
+                   rel="noopener"
+                   class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-label">LinkedIn</span>
+                        <span class="contact-card-handle">amirhossein-rahimi9</span>
+                    </div>
+                    <div class="contact-card-arrow">←</div>
+                </a>
+
+                <a href="https://t.me/AmirhR_SED"
+                   target="_blank"
+                   rel="noopener"
+                   class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor">
+                            <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 12 12 12 0 0011.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        </svg>
+                    </div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-label">Telegram</span>
+                        <span class="contact-card-handle">@AmirhR_SED</span>
+                    </div>
+                    <div class="contact-card-arrow">←</div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            ساخته‌شده با ❤️ توسط Amirhossein Rahimi &nbsp;·&nbsp; © 2026
+        </p>
+
+        <div class="footer-links">
+            <a href="https://github.com/AmirhosseinR9" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/amirhossein-rahimi9" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://t.me/AmirhR_SED" target="_blank" rel="noopener" aria-label="Telegram">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 12 12 12 0 0011.944 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
