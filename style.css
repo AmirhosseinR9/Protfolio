@@ -238,8 +238,8 @@ body{
 }
 
 .hero-avatar{
-    width:260px;
-    height:260px;
+    width:320px;
+    height:320px;
     object-fit:cover;
     object-position:top;
 
@@ -281,11 +281,13 @@ body{
 
 /* Static sub-heading */
 .hero-static-sub{
-    color:var(--accent);
+    color:var(--muted);
     font-size:0.95rem;
-    font-weight:600;
-    margin-bottom:10px;
-    opacity:0.85;
+    font-weight:400;
+    margin-bottom:16px;
+    opacity:0.9;
+    line-height:1.9;
+    max-width:520px;
 }
 
 .hero-subtitle{
@@ -763,8 +765,8 @@ footer{
     }
 
     .hero-avatar{
-        width:200px;
-        height:200px;
+        width:220px;
+        height:220px;
     }
 
     .about-glass-card{
@@ -797,8 +799,8 @@ footer{
     }
 
     .hero-avatar{
-        width:160px;
-        height:160px;
+        width:190px;
+        height:190px;
     }
 
     .section{
