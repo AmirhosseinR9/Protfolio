@@ -1,11 +1,35 @@
 // =====================
+// Theme Toggle
+// =====================
+
+(function(){
+    const saved = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", saved);
+})();
+
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+
+    // Update canvas particle color immediately
+    particleColor = next === "light" ? "#D97706" : "#00d4ff";
+});
+
+// =====================
 // Profile Image Protection
 // =====================
 
-const profileImg = document.querySelector(".hero-avatar");
+const profileImg = document.querySelector(".profile img");
 
 if (profileImg) {
+    // Disable right-click context menu
     profileImg.addEventListener("contextmenu", e => e.preventDefault());
+
+    // Disable drag-and-drop
     profileImg.addEventListener("dragstart", e => e.preventDefault());
 }
 
@@ -24,9 +48,10 @@ AOS.init({
 
 const typingText = document.getElementById("typing-text");
 
-// REMOVED: "سازنده فناوری و نرم‌افزار" and "توسعه‌دهنده با رویکرد مهندسی"
 const words = [
+    "سازنده فناوری و نرم‌افزار",
     "دانش‌آموز الکتروتکنیک",
+    "توسعه‌دهنده با رویکرد مهندسی",
     "AI-Assisted Developer",
     "در حال ساخت ایده‌های کاربردی"
 ];
@@ -64,6 +89,33 @@ function typeEffect(){
 typeEffect();
 
 // =====================
+// Counter
+// =====================
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+    const target = +counter.dataset.target;
+    let count = 0;
+
+    const updateCounter = ()=>{
+        const increment = Math.ceil(target/60);
+        count += increment;
+
+        if(count >= target){
+            counter.innerText = target;
+            return;
+        }
+
+        counter.innerText = count;
+        requestAnimationFrame(updateCounter);
+    };
+
+    updateCounter();
+});
+
+// =====================
 // Custom Cursor
 // =====================
 
@@ -88,7 +140,7 @@ if (isTouchDevice) {
 }
 
 // =====================
-// Hamburger Menu
+// Hamburger Menu — NEW
 // =====================
 
 const hamburger = document.getElementById("hamburger");
@@ -100,6 +152,7 @@ hamburger.addEventListener("click", () => {
     hamburger.setAttribute("aria-label", isOpen ? "بستن منو" : "باز کردن منو");
 });
 
+// Close mobile menu when any link inside it is clicked
 mobileMenu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
         mobileMenu.classList.remove("is-open");
@@ -108,6 +161,7 @@ mobileMenu.querySelectorAll("a").forEach(link => {
     });
 });
 
+// Close mobile menu on outside click
 document.addEventListener("click", e => {
     if (
         mobileMenu.classList.contains("is-open") &&
@@ -157,7 +211,9 @@ projects.forEach((project, i) => {
             <h3>${project.title}</h3>
             <p>${project.description}</p>
             <div class="project-tags">
-                ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+                ${project.tags.map(tag => `
+                <span class="tag">${tag}</span>
+                `).join("")}
             </div>
         </div>
     </a>
@@ -176,29 +232,38 @@ canvas.height = window.innerHeight;
 
 const particles = [];
 
-for(let i = 0; i < 80; i++){
+// Dynamic particle color based on active theme
+let particleColor = document.documentElement.getAttribute("data-theme") === "light"
+    ? "#D97706"
+    : "#00d4ff";
+
+for(let i=0; i<80; i++){
     particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 2,
-        dx: (Math.random() - 0.5) * 0.4,
-        dy: (Math.random() - 0.5) * 0.4
+        radius: Math.random()*2,
+        dx: (Math.random()-0.5) * 0.4,
+        dy: (Math.random()-0.5) * 0.4
     });
 }
 
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    particles.forEach(p => {
+    particles.forEach(p=>{
         p.x += p.dx;
         p.y += p.dy;
 
-        if(p.x < 0 || p.x > canvas.width)  p.dx *= -1;
-        if(p.y < 0 || p.y > canvas.height) p.dy *= -1;
+        if(p.x < 0 || p.x > canvas.width){
+            p.dx *= -1;
+        }
+        if(p.y < 0 || p.y > canvas.height){
+            p.dy *= -1;
+        }
 
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "#00d4ff";
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI*2);
+        ctx.fillStyle = particleColor;
         ctx.fill();
     });
 
@@ -207,7 +272,7 @@ function animate(){
 
 animate();
 
-window.addEventListener("resize", () => {
+window.addEventListener("resize", ()=>{
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
